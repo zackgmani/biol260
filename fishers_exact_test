@@ -1,0 +1,40 @@
+#### --------------------------------------------------------------
+### Chipmunk example, Fisher’s exact test, p. 80
+### --------------------------------------------------------------
+ 
+Input =("
+Distance    Trill  No.trill
+ 10m        16     8
+ 100m        3    18
+")
+
+Matriz = as.matrix(read.table(textConnection(Input),
+                   header=TRUE,
+                   row.names=1))
+
+Matriz
+
+fisher.test(Matriz,
+            alternative="two.sided")
+
+
+### --------------------------------------------------------------
+### Moray eel example, Fisher’s exact test, pp. 81–82
+### --------------------------------------------------------------
+
+Input =("
+
+ Site     G.moringa  G.vicinus      
+ Grass    127        116
+ Sand      99         67
+ Border   264        161
+")
+
+Matriz = as.matrix(read.table(textConnection(Input),
+                   header=TRUE,
+                   row.names=1))
+
+Matriz
+
+fisher.test(Matriz,
+            alternative="two.sided")
